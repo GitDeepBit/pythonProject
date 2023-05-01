@@ -14,21 +14,34 @@ meriBall = puttarJi()
 meriBall.function2()
 
 
-# If child's object is defined, parent constructor is called only when child constructor is not defined in child's class
+# Default can mean two things:
+# If no constructor is defined, it means default
+# If constructor is defined but without parameter, it means default
 
+# When child's object is defined
+# Parent constructor will be called only when child constructor is not defined inside child's class
+# Meaning child class's constructor is default [ Not explicitly defined inside the class ]
 
-# If child's object is defined and also has a constructor, it will call the child constructor be default and not
-# parent's constructor
+# When child's object is defined & it has a constructor [ Default or parameterised ]
+# It will call the child constructor by default and not parent's constructor
 
 #     def __init__(self):
 #         print("Puttar's construtor")
+
 # childClass = puttarJi()
 
-# If child class has a default constructor of its own, then parent's constructor will only be accessed when it is called
-# inside child's constructor
+# When parent class has a constructor and child class inherits parent class
+# Then parent's constructor should be called from the child constructor before any other code
+# Otherwise code will not work
 
 #     def __init__(self):
 #         papaJi.__init__(self)
 #         print("Puttar's construtor")
 # childClass = puttarJi()
+
+# If Parent's class constructor is a default constructor [ Meaning it is not defined inside the parent class ]
+# Then parent's constructor is not required to be explicitly called from within the child's class
+
+
+
 

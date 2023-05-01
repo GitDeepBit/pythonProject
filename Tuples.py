@@ -7,6 +7,6 @@ print(tuple1)
 # TypeError: 'tuple' object does not support item assignment
 # tuple1[1] = "44"
 
-# Returns the count of the argument/value passed in count function
+# Returns the number of occurrence of the value from tuple which is passed in count function as an argument
 print(tuple1.count(1))
 print(tuple1.count(2))

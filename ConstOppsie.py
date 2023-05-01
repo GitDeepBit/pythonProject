@@ -6,8 +6,8 @@ class KyaNaamDu:
     def tester(self, fv, sv):  # These are local variables to class' function
         # The below ones are instance variable i.e. Class' object variable and can only be called used self keyword
         # self.fv = 2400
-        self.de = 1000
-        KyaNaamDu.fv = 700
+        self.de = 1000  # Local instance variable
+        KyaNaamDu.fv = 700 # Class variable got re-initialised here
         # All class variables are universal, since self is an object, changing the value of class variable of self
         # won't affect the value of the class variable of the original object
         return str(KyaNaamDu.fv) + " " + self.fv

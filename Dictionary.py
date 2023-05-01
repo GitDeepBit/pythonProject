@@ -14,6 +14,7 @@ dict2 = {}
 dict2["1st Number"] = 1
 dict2["2nd Number"] = 2
 dict2["3rd Number"] = 2
+dict2[4] = "4th Number"
 
 print(dict2)
 

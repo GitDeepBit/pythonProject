@@ -16,12 +16,12 @@ class papaJi():
         papaJi.var1 = 50
         print("Summation of PapaJi's Variables is:", self.var1 + self.var2 + self.p1 + papaJi.var1)
 
-# if __name__ == '__main__':
-vadde = papaJi()
-vadde1 = papaJi()
-vadde.function1()
-vadde1.function1()
-vadde.__init__()
+if __name__ == '__main__':
+    vadde = papaJi()
+    vadde1 = papaJi()
+    vadde.function1()
+    vadde1.function1()
+    vadde.__init__()
 
 
 
