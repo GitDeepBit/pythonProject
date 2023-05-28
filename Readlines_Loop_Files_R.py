@@ -16,7 +16,7 @@ while lineObj != "":
 lineObj1 = fileObj1.readlines()
 
 # This will print the output in a list
-print(lineObj1)
+print("File will be printed using List", lineObj1)
 
 # Reading the list using for loop by interation of index
 for line in lineObj1:
