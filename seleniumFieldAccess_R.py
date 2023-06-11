@@ -27,5 +27,5 @@ driver.find_element(By.NAME, "email").send_keys("dsm.deep97@gmail.com")
 # Same as above comment, here we have used ID locator instead of NAME locator
 driver.find_element(By.ID, "exampleInputPassword1").send_keys("Password123")
 
-# In case of fields that requires a click we use, click function. It depends on the type of field we are using
+# In case of fields that requires a click, we use click function. It depends on the type of field we are using
 driver.find_element(By.ID, "exampleCheck1").click()

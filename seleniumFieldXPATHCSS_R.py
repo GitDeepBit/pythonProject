@@ -32,7 +32,7 @@ driver.find_element(By.ID, "exampleCheck1").click()
 
 # By.CSSSelector
 # tagName[attribute='value']
-driver.find_element(By.CSS_SELECTOR, "input[name=name]").send_keys("Deep Singh Modi")
+driver.find_element(By.CSS_SELECTOR, "input[name='name']").send_keys("Deep Singh Modi")
 
 # By.XPATH
 # //tagName[@attribute='value']
