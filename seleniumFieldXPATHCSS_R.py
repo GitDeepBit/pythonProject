@@ -1,7 +1,7 @@
 # XPATH, CSS
 # ***IMP****
 # Whenever using Class as an attribute in XPATH, make sure to use all the values of the class attribute
-# otherwise it won't work. For eg, class attribute had 4 class names as values than passing only 1 value will
+# otherwise it won't work. For eg, class attribute had 4 class names as values then passing only 1 value will
 # fail the code. **This can work only when we are using CSSSelector or ClassName**
 # ***IMP****
 
@@ -43,11 +43,10 @@ driver.find_element(By.XPATH, "//input[@type='submit']").click()
 message = driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']").text
 # OR driver.find_element(By.CLASS_NAME, "alert-success") - Another Syntax
 
-# Printing the message which is grabbed in line 38
-print(message)
-
 # assert(message == "Success! The Form has been submitted successfully!.")
 assert 'Success' in message
 
-driver.close()
+# Printing the message which is grabbed in line 38
+print(message)
 
+driver.close()

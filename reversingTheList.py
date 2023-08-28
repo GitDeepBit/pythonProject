@@ -49,6 +49,7 @@ list1 = list2
 
 print(list1)
 
+# When we open file in w+ mode it will clear the contents of the file and starting writing from first index
 fileReader = open('empFile.txt', 'w+')
 
 for fileLines in list1:

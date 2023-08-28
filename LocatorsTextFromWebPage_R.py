@@ -1,3 +1,8 @@
+# Buttons text using text() function
+# text() can only be used when there is a Value inside the tag [ not value attribute ]
+# For example: <button id = "button1">Save New Password</button>
+# Here, Save New Password is a value enclosed inside the tag & it is not a value attribute
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service

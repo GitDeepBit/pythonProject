@@ -32,12 +32,12 @@ print(driver.current_url)
 driver.close()
 
 # Webdriver object needs service class's object to invoke browser's driver
-# Browser's driver can be invoked via web driver application
-# Web driver application can be fetched via service class' object
-# So, web driver application path will be passed as argument in service class object
+# Browser's driver can be invoked via web driver windows application
+# Web Driver windows application can be fetched via service class' object
+# So, web driver windows application path will be passed as argument in service class object
 # This WAY:
 # Service class object will invoke the driver application which in turn will invoke the browser
-# This way we will get the control of the first browser/browser window using webdriver's object
+# This way we will get the control of the first browser/browser window using web driver's object
 
 
 

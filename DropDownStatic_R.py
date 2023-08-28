@@ -1,11 +1,12 @@
-# CSSSelector = (By.CSS_SELECTOR, "#ID") OR (BY.CSS_SELECTOR, ".className")
-# XPATH = (BY.XPATH, "(//tagName=[@attribute='value'])[appearance or index]") -> Appearance or index, refer line 44
+# Static dropdown values can be accessed using select() class
+# We will pass driver.find_element inside Select() class
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 optobj = Options()
 optobj.add_experimental_option("detach", True)
@@ -26,24 +27,24 @@ driver.find_element(By.ID, "exampleCheck1").click()
 
 driver.find_element(By.CSS_SELECTOR, "input[name=name]").send_keys("Deep Singh Modi")
 
-# We can use #ID or .className in CSS Selector
-# #ID is used in CSS Selector when there is an id attribute & we want to make it unique
-# .className is used in CSS Selector when there is a class attribute & we want to make it unique
-# Here, #ID is the value present against id attribute in the tag
-# Same goes for the class name as well, class attribute holding value i.e. class name
 driver.find_element(By.CSS_SELECTOR, "#inlineRadio1")
+
+# Select for Static drop down
+# Static Drop Down
+
+dropDown = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
+
+dropDown.select_by_index(1)  # Selects Female
+dropDown.select_by_visible_text("Male")
+
+# dropDown.select_by_value("")  # This will work only when there is a value attribute in the tag
 
 driver.find_element(By.XPATH, "//input[@type='submit']").click()
 
 message = driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']").text
 
-# There is a new way to traverse a particular field using XPATH where XPATH is also common across the page
-# Meaning there are n number of fields which can be accessed using the following XPATH:- //input[@type='text']
-# But to access a particular field based on its occurrence on the page we have used indexing
-# Here, [3] represents that it is 3RD FIELD on the page, starting from TOP LEFT of the page & we want to access it
 driver.find_element(By.XPATH, "(//input[@type='text'])[3]").send_keys("Overriding")
 
-# Clearing the field using ".clear() method" as this is a twin field on the page which takes value from line 27
 driver.find_element(By.XPATH, "(//input[@type='text'])[3]").clear()
 
 print(message)
